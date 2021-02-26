@@ -1,0 +1,11 @@
+#app {
+  background: #ccc;
+  margin: 2em auto;
+  padding: 2em;
+  width: 500px;
+}
+
+#app-title {
+  font-size: 2em;
+  font-weight: 700;
+}
