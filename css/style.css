@@ -1,11 +1,57 @@
-#app {
-  background: #ccc;
-  margin: 2em auto;
-  padding: 2em;
-  width: 500px;
+html {
+  --cell-size: 150px;
+  --color-one: #0bad93;
+  --color-two: #fffdd8;
+  --color-cross: rgba(104, 156, 223, 0.733);
+  --color-circle:  rgba(192, 214, 156, 0.733);
+  font-family: "Lucida Console", sans-serif;
+  text-align: center;
 }
 
-#app-title {
-  font-size: 2em;
-  font-weight: 700;
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-one);
+}
+
+#grid {
+  font-size: 14px;
+  display: inline-block;
+  margin: 1rem 0;
+
+  border: 1px solid var(--color-one);
+}
+
+.row {
+  background-color: var(--color-two);
+  display: flex;
+}
+
+.cell {
+  color: var(--color-one);
+  font-size: 1.2rem;
+  text-align: center;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  line-height: var(--cell-size);
+  white-space: nowrap;
+  flex-grow: 2;
+  border-bottom: 1px solid var(--color-one);
+  border-right: 1px solid var(--color-one);
+}
+
+.cell.cross {
+  background-color: var(--color-cross);
+  font-size: 0;
+}
+
+.cell.circle {
+  background-color: var(--color-circle);
+  font-size: 0;
 }
