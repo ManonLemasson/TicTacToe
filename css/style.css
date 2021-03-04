@@ -55,3 +55,9 @@ h1 {
   background-color: var(--color-circle);
   font-size: 0;
 }
+
+#result {
+  color : var(--color-one);
+  margin: 2rem;
+  font-size: 1.5rem;
+}

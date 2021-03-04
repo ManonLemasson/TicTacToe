@@ -21,6 +21,17 @@ handleCellClick: function(event){
         // On envoie le missile en utilisant la méthode sendMissileAt qui est rangée dans l'objet game.
         game.sendMissileAt(row, column);
         console.log(grid.cells);
+
+        // changement du nom de joueur pour son tour
+        const playerTurn = document.querySelector('#player');
+        playerTurn.innerHTML = game.playerNb;
+
+        //Affichage message du gagnant
+        const messageResult = document.querySelector('#result');
+        if (game.checkGameOver()) {
+            messageResult.innerHTML = '<p>' + game.whoWin + '</p>';
+        }
+        
         
 
 
@@ -30,11 +41,10 @@ init: function (){
 
     grid.init();
     
-        
-    // Affichage de la grille
-    //grid.displayGrid();
+     
 
     const cells = document.querySelectorAll('div.cell');
+    
 
         // On ne peut pas placer d'écouteur d'événements sur un tableau (cells), on doit donc boucler sur celui-ci pour placer un écouteur sur chaque cellule individuellement.
         for (let cell of cells) {
@@ -43,7 +53,17 @@ init: function (){
         }
 
 
-} }
+    const playButton = document.querySelector('#play');
+
+    playButton.addEventListener('click', function(){
+
+        document.location.reload();
+
+    })
+
+
+} 
+}
 
 
 
