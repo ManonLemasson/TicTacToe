@@ -1,7 +1,7 @@
 html {
   --cell-size: 150px;
-  --color-one: #0bad93;
-  --color-two: #fffdd8;
+  --color-one: #1a8d7ace;
+  --color-two: #9bc9d1dc;
   --color-cross: rgba(104, 156, 223, 0.733);
   --color-circle:  rgba(192, 214, 156, 0.733);
   font-family: "Lucida Console", sans-serif;
